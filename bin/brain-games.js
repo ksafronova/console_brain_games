@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import startDialogue from '../src/cli.js'
+import startDialogue from '../src/cli.js';
 
-startDialogue()
+startDialogue();
