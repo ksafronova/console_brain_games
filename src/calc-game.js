@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import dialogue from './dialogue.js';
-import { math, randomOperator, randomazer } from './game-functions.js';
+import {
+  math, randomOperator, randomazer, compareAnswer,
+} from './game-functions.js';
 
 export default function calcGame(tries, name) {
   for (let i = 0; i < tries; i++) {
@@ -9,7 +11,6 @@ export default function calcGame(tries, name) {
     const correctAnswer = math(operator, operands);
     console.log(`Question: ${operands[0]} ${operator} ${operands[1]}`);
     const userAnswer = readlineSync.question(`${dialogue.answer}`);
-    console.log(userAnswer === correctAnswer ? dialogue.correct
-      : `'${userAnswer}'${dialogue.wrongAnswer}'${correctAnswer}'.\n ${dialogue.letsTryAgain}${name}`);
+    console.log(compareAnswer(correctAnswer, userAnswer, name));
   }
 }

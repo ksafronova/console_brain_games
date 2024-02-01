@@ -1,5 +1,6 @@
 import random from 'random';
 import _ from 'lodash';
+import dialogue from './dialogue';
 
 function isEven(number) {
   return number % 2 === 0 ? 'yes' : 'no';
@@ -26,9 +27,16 @@ function math(operator, operands) {
       return _.multiply(operands);
     case '-':
       return _.subtract(operands);
+    default:
   }
 }
 
+function compareAnswer(correctAnswer, userAnswer, userName) {
+  return userAnswer === correctAnswer
+    ? dialogue.correctAnswer
+    : `'${userAnswer}'${dialogue.wrongAnswer}'${correctAnswer}'.\n ${dialogue.letsTryAgain}${userName}`;
+}
+
 export {
-  isEven, randomazer, randomOperator, math,
+  isEven, randomazer, randomOperator, math, compareAnswer,
 };
