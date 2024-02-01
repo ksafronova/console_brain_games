@@ -1,10 +1,9 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+import startDialogue from '../src/cli.js'
 import evenGame from '../src/even-game.js';
+import dialogue from '../src/dialogue.js';
 
-console.log('Welcome to the Brain Games!');
-const userName = readlineSync.question('May I have your name?');
-console.log(`Hello, ${userName}!`);
-console.log('Answer "yes" if the number is even, otherwise answer "no');
+const userName = startDialogue();
+console.log(dialogue.brainEvenRules);
 evenGame(3, userName);
-console.log(`Congratulations, ${userName}`);
+console.log(`${dialogue.endOfTheGame}${userName}!`);

@@ -1,6 +1,4 @@
 #!/usr/bin/env node
+import startDialogue from '../src/cli.js'
 
-import startDialog from '../src/cli.js';
-
-console.log('Welcome to the Brain Games!');
-console.log(`Hello, ${startDialog()}!`);
+startDialogue()
