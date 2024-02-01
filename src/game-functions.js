@@ -1,6 +1,6 @@
 import random from 'random';
 import _ from 'lodash';
-import dialogue from './dialogue';
+import dialogue from './dialogue.js';
 
 function isEven(number) {
   return number % 2 === 0 ? 'yes' : 'no';
@@ -24,17 +24,17 @@ function math(operator, operands) {
     case '+':
       return _.sum(operands);
     case '*':
-      return _.multiply(operands);
+      return _.multiply(operands[0], operands[1]);
     case '-':
-      return _.subtract(operands);
+      return _.subtract(operands[0], operands[1]);
     default:
   }
 }
 
 function compareAnswer(correctAnswer, userAnswer, userName) {
-  return userAnswer === correctAnswer
+  return (correctAnswer - userAnswer) === 0 || correctAnswer === userAnswer
     ? dialogue.correctAnswer
-    : `'${userAnswer}'${dialogue.wrongAnswer}'${correctAnswer}'.\n ${dialogue.letsTryAgain}${userName}`;
+    : `'${userAnswer}'${dialogue.wrongAnswer}'${correctAnswer}'.\n ${dialogue.letsTryAgain}${userName}!`;
 }
 
 export {
