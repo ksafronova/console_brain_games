@@ -48,6 +48,23 @@ function gsd(numbers) {
   return minNum;
 }
 
+function progressionGenerator(progressionLength) {
+  const progressionStep = random.int(2, 50);
+  const progression = [random.int(2, 15)];
+  for (let i = 0; i < progressionLength; i++) {
+    const nextNum = progression[i] + progressionStep;
+    progression.push(nextNum);
+  }
+  return progression;
+}
+
+function progressionMask(progression, secretNumber) {
+  const newProgression = [...progression];
+  newProgression[secretNumber] = '...';
+  return newProgression.toString();
+}
+
 export {
   isEven, randomazer, randomOperator, math, compareAnswer, gsd,
+  progressionGenerator, progressionMask,
 };
