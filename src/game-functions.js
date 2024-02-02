@@ -37,6 +37,17 @@ function compareAnswer(correctAnswer, userAnswer, userName) {
     : `'${userAnswer}'${dialogue.wrongAnswer}'${correctAnswer}'.\n ${dialogue.letsTryAgain}${userName}!`;
 }
 
+function gsd(numbers) {
+  let maxNum = _.max(numbers);
+  let minNum = _.min(numbers);
+  while (maxNum % minNum !== 0) {
+    const deviation = maxNum % minNum;
+    maxNum = minNum;
+    minNum = deviation;
+  }
+  return minNum;
+}
+
 export {
-  isEven, randomazer, randomOperator, math, compareAnswer,
+  isEven, randomazer, randomOperator, math, compareAnswer, gsd,
 };
