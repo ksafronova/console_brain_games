@@ -61,7 +61,7 @@ function progressionGenerator(progressionLength) {
 function progressionMask(progression, secretNumber) {
   const newProgression = [...progression];
   newProgression[secretNumber] = '...';
-  return newProgression.toString();
+  return newProgression.join(' ');
 }
 
 export {
