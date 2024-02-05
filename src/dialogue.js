@@ -9,6 +9,7 @@ const dialogue = {
   answer: 'Your answer: ',
   correctAnswer: 'Correct!',
   wrongAnswer: ' is wrong answer ;(. Correct answer was ',
+  hooligansAnswer: "I don't understand this answer. You should answer as described in the rules",
   letsTryAgain: "Let's try again, ",
   endOfTheGame: 'Congratulations, ',
 };

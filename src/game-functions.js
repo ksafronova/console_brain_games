@@ -7,6 +7,9 @@ function isEven(number) {
 }
 
 function randomazer(count, minRandomNumber, maxRandomNumber) {
+  if (count === 1) {
+    return random.int(minRandomNumber, maxRandomNumber);
+  }
   const numbers = [];
   for (let i = 0; i < count; i++) {
     numbers.push(random.int(minRandomNumber, maxRandomNumber));
@@ -19,7 +22,7 @@ function randomOperator() {
   return operators[randomazer(1, 0, 2)];
 }
 
-function math(operator, operands) {
+function mathOperation(operator, operands) {
   switch (operator) {
     case '+':
       return _.sum(operands);
@@ -29,6 +32,7 @@ function math(operator, operands) {
       return _.subtract(operands[0], operands[1]);
     default:
   }
+  return 0;
 }
 
 function compareAnswer(correctAnswer, userAnswer, userName) {
@@ -41,9 +45,9 @@ function gsd(numbers) {
   let maxNum = _.max(numbers);
   let minNum = _.min(numbers);
   while (maxNum % minNum !== 0) {
-    const deviation = maxNum % minNum;
+    const surplus = maxNum % minNum;
     maxNum = minNum;
-    minNum = deviation;
+    minNum = surplus;
   }
   return minNum;
 }
@@ -64,7 +68,18 @@ function progressionMask(progression, secretNumber) {
   return newProgression.join(' ');
 }
 
+function isPrime(number) {
+  const endDivider = number ** 0.5;
+  for (let i = 2; i < endDivider; i++) {
+    if (number % i === 0) {
+      return 'yes';
+    }
+    continue;
+  }
+  return 'no';
+}
+
 export {
-  isEven, randomazer, randomOperator, math, compareAnswer, gsd,
-  progressionGenerator, progressionMask,
+  isEven, randomazer, randomOperator, mathOperation, compareAnswer, gsd,
+  progressionGenerator, progressionMask, isPrime,
 };
