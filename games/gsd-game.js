@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import dialogue from './dialogue.js';
+import dialogue from '../src/dialogue.js';
 import { randomazer, compareAnswer, gsd } from './game-functions.js';
 
 export default function gsdGame(tries, name) {

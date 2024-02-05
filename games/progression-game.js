@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import random from 'random';
-import dialogue from './dialogue.js';
+import dialogue from '../src/dialogue.js';
 import {
   randomazer, compareAnswer, progressionGenerator, progressionMask,
 } from './game-functions.js';

@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import dialogue from './dialogue.js';
+import dialogue from '../src/dialogue.js';
 import {
   mathOperation, randomOperator, randomazer, compareAnswer,
 } from './game-functions.js';

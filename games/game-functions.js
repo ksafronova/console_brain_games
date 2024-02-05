@@ -1,6 +1,6 @@
 import random from 'random';
 import _ from 'lodash';
-import dialogue from './dialogue.js';
+import dialogue from '../src/dialogue.js';
 
 function isEven(number) {
   return number % 2 === 0 ? 'yes' : 'no';
