@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import dialogue from '../src/dialogue.js';
 import startDialogue from '../src/cli.js';
-import primeGame from '../src/prime-game.js';
+import primeGame from '../games/prime-game.js';
 
 const userName = startDialogue();
 console.log(dialogue.brainCalculatorRule);

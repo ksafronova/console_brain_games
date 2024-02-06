@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import dialogue from '../src/dialogue.js';
-import { isEven, randomazer, compareAnswer } from './game-functions.js';
+import { isEven, randomazer, compareAnswer } from '../src/index.js';
 
 export default function evenGame(tries, name) {
   const randomNumber = randomazer(3, 1, 1000);

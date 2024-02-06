@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import dialogue from '../src/dialogue.js';
 import {
   mathOperation, randomOperator, randomazer, compareAnswer,
-} from './game-functions.js';
+} from '../src/index.js';
 
 export default function calcGame(tries, name) {
   for (let i = 0; i < tries; i++) {

@@ -7,8 +7,14 @@ Install games:
 1 Clone repository
 2 Inside of repository run `sudo npm link`
 
-brain-even: https://asciinema.org/a/ngZB3qg96kabKgv96c8kvWRmP
+brain-games:https://asciinema.org/a/NGSOyjq3SvKXL3eCI0TW7CcYZ
+
+brain-even: https://asciinema.org/a/ngZB3qg96kabKgv96c8kvWRmP 
+
 brain-calc: https://asciinema.org/a/dORooSM7mDoKRddComngj95oX
+
 brain-gcd: https://asciinema.org/a/FQVM30g7b7SPa9SitK4dioNXD
+
 brain-progression: https://asciinema.org/a/lhDq2Ooap45aOzQPnF6BeqMlF
+
 brain-prime: https://asciinema.org/a/ixUngWOsI9K3JD7DlqFTRRhXJ

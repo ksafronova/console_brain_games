@@ -3,7 +3,7 @@ import random from 'random';
 import dialogue from '../src/dialogue.js';
 import {
   randomazer, compareAnswer, progressionGenerator, progressionMask,
-} from './game-functions.js';
+} from '../src/index.js';
 
 export default function progressionGame(tries, name) {
   for (let i = 0; i < tries; i++) {

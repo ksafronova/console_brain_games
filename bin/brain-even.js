@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import startDialogue from '../src/cli.js';
-import evenGame from '../src/even-game.js';
+import evenGame from '../games/even-game.js';
 import dialogue from '../src/dialogue.js';
 
 const userName = startDialogue();
