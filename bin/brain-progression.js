@@ -6,4 +6,3 @@ import progressionGame from '../games/progression-game.js';
 const userName = startDialogue();
 console.log(dialogue.brainCalculatorRule);
 progressionGame(3, userName);
-console.log(`${dialogue.endOfTheGame}${userName}!`);

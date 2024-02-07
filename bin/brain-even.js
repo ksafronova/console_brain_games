@@ -6,4 +6,3 @@ import dialogue from '../src/dialogue.js';
 const userName = startDialogue();
 console.log(dialogue.brainEvenRules);
 evenGame(3, userName);
-console.log(`${dialogue.endOfTheGame}${userName}!`);

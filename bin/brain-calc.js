@@ -6,4 +6,3 @@ import calcGame from '../games/calc-game.js';
 const userName = startDialogue();
 console.log(dialogue.brainCalculatorRule);
 calcGame(3, userName);
-console.log(`${dialogue.endOfTheGame}${userName}!`);

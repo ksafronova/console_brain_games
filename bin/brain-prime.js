@@ -6,4 +6,3 @@ import primeGame from '../games/prime-game.js';
 const userName = startDialogue();
 console.log(dialogue.brainCalculatorRule);
 primeGame(3, userName);
-console.log(`${dialogue.endOfTheGame}${userName}!`);

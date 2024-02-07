@@ -36,7 +36,7 @@ function mathOperation(operator, operands) {
 }
 
 function compareAnswer(correctAnswer, userAnswer, userName) {
-  return (correctAnswer - userAnswer) === 0 || correctAnswer === userAnswer
+  return isCorrectUserAnswer(correctAnswer, userAnswer) === 1
     ? dialogue.correctAnswer
     : `'${userAnswer}' ${dialogue.wrongAnswer} '${correctAnswer}'.\n ${dialogue.letsTryAgain} ${userName}!`;
 }
@@ -79,7 +79,11 @@ function isPrime(number) {
   return 'no';
 }
 
+function isCorrectUserAnswer(correctAnswer, userAnswer) {
+  return (correctAnswer - userAnswer) === 0 || correctAnswer === userAnswer ? 1 : 0;
+}
+
 export {
   isEven, randomazer, randomOperator, mathOperation, compareAnswer, gsd,
-  progressionGenerator, progressionMask, isPrime,
+  progressionGenerator, progressionMask, isPrime, isCorrectUserAnswer,
 };
