@@ -83,7 +83,13 @@ function isCorrectUserAnswer(correctAnswer, userAnswer) {
   return (correctAnswer - userAnswer) === 0 || correctAnswer === userAnswer ? 1 : 0;
 }
 
+function congratulations(tries, userScore, name) {
+  return userScore === tries
+    ? console.log(`${dialogue.endOfTheGame} ${name}!`)
+    : 0;
+}
+
 export {
   isEven, randomazer, randomOperator, mathOperation, compareAnswer, gsd,
-  progressionGenerator, progressionMask, isPrime, isCorrectUserAnswer,
+  progressionGenerator, progressionMask, isPrime, isCorrectUserAnswer, congratulations,
 };

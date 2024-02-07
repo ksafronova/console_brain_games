@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import dialogue from '../src/dialogue.js';
 import {
-  mathOperation, randomOperator, randomazer, compareAnswer, isCorrectUserAnswer,
+  mathOperation, randomOperator, randomazer, compareAnswer, isCorrectUserAnswer, congratulations,
 } from '../src/index.js';
 
 export default function calcGame(tries, name) {
@@ -15,7 +15,5 @@ export default function calcGame(tries, name) {
     console.log(compareAnswer(correctAnswer, userAnswer, name));
     userScore += isCorrectUserAnswer(correctAnswer, userAnswer);
   }
-  if(userScore === tries) {
-    console.log(`${dialogue.endOfTheGame}${name}!`);
-  }
+  congratulations(tries, userScore, name);
 }

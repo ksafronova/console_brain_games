@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import random from 'random';
 import dialogue from '../src/dialogue.js';
 import {
-  randomazer, compareAnswer, progressionGenerator, progressionMask, isCorrectUserAnswer,
+  randomazer, compareAnswer, progressionGenerator, progressionMask, isCorrectUserAnswer, congratulations,
 } from '../src/index.js';
 
 export default function progressionGame(tries, name) {
@@ -16,7 +16,5 @@ export default function progressionGame(tries, name) {
     console.log(compareAnswer(correctAnswer, userAnswer, name));
     userScore += isCorrectUserAnswer(correctAnswer, userAnswer);
   }
-  if(userScore === tries) {
-    console.log(`${dialogue.endOfTheGame}${name}!`);
-  }
+  congratulations(tries, userScore, name);
 }
