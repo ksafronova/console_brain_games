@@ -38,7 +38,7 @@ function mathOperation(operator, operands) {
 function compareAnswer(correctAnswer, userAnswer, userName) {
   return (correctAnswer - userAnswer) === 0 || correctAnswer === userAnswer
     ? dialogue.correctAnswer
-    : `'${userAnswer}'${dialogue.wrongAnswer}'${correctAnswer}'.\n ${dialogue.letsTryAgain}${userName}!`;
+    : `'${userAnswer}' ${dialogue.wrongAnswer} '${correctAnswer}'.\n ${dialogue.letsTryAgain} ${userName}!`;
 }
 
 function gsd(numbers) {
