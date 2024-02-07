@@ -5,7 +5,7 @@ const dialogue = {
   brainEvenRules: 'Answer "yes" if the number is even, otherwise answer "no"',
   brainCalculatorRule: 'What is the result of the expression?',
   brainGSDRule: 'Find the greatest common divisor of given numbers.',
-  question: 'Question: ',
+  question: 'Question:',
   answer: 'Your answer: ',
   correctAnswer: 'Correct!',
   wrongAnswer: 'is wrong answer ;(. Correct answer was',
