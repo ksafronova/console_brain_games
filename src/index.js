@@ -72,8 +72,6 @@ function isPrime(number) {
   }
   return 'yes';
 }
-console.log(isPrime(9136));
-
 
 function isCorrectUserAnswer(correctAnswer, userAnswer) {
   return !!((correctAnswer - userAnswer) === 0 || correctAnswer === userAnswer);
