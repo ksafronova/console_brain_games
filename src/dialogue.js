@@ -5,11 +5,12 @@ const dialogue = {
   brainEvenRules: 'Answer "yes" if the number is even, otherwise answer "no"',
   brainCalculatorRule: 'What is the result of the expression?',
   brainGSDRule: 'Find the greatest common divisor of given numbers.',
+  brainProgressionRule: 'What number is missing in the progression?',
+  brainPrimeRule: 'Answer "yes" if given number is prime. Otherwise answer "no".',
   question: 'Question:',
   answer: 'Your answer: ',
   correctAnswer: 'Correct!',
   wrongAnswer: 'is wrong answer ;(. Correct answer was',
-  hooligansAnswer: "I don't understand this answer. You should answer as described in the rules",
   letsTryAgain: "Let's try again,",
   endOfTheGame: 'Congratulations,',
 };

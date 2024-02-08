@@ -1,19 +1,21 @@
 import readlineSync from 'readline-sync';
 import dialogue from '../src/dialogue.js';
 import {
-  mathOperation, randomOperator, randomazer, compareAnswer, isCorrectUserAnswer, congratulations,
+  mathOperation, randomOperator, randomazer, isCorrectUserAnswer, congratulations,
 } from '../src/index.js';
 
 export default function calcGame(tries, name) {
-  let userScore = 0;
+  console.log(dialogue.brainCalculatorRule);
   for (let i = 0; i < tries; i++) {
     const operands = randomazer(2, 1, 100);
     const operator = randomOperator();
     const correctAnswer = mathOperation(operator, operands);
     console.log(`Question: ${operands[0]} ${operator} ${operands[1]}`);
     const userAnswer = readlineSync.question(`${dialogue.answer}`);
-    console.log(compareAnswer(correctAnswer, userAnswer, name));
-    userScore += isCorrectUserAnswer(correctAnswer, userAnswer);
+    if (!isCorrectUserAnswer(correctAnswer, userAnswer)) {
+      return `'${userAnswer}' ${dialogue.wrongAnswer} '${correctAnswer}'.\n ${dialogue.letsTryAgain} ${name}!`;
+    }
+    console.log(dialogue.correctAnswer);
   }
-  congratulations(tries, userScore, name);
+  return congratulations(name);
 }

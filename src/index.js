@@ -35,12 +35,6 @@ function mathOperation(operator, operands) {
   return 0;
 }
 
-function compareAnswer(correctAnswer, userAnswer, userName) {
-  return isCorrectUserAnswer(correctAnswer, userAnswer) === 1
-    ? dialogue.correctAnswer
-    : `'${userAnswer}' ${dialogue.wrongAnswer} '${correctAnswer}'.\n ${dialogue.letsTryAgain} ${userName}!`;
-}
-
 function gsd(numbers) {
   let maxNum = _.max(numbers);
   let minNum = _.min(numbers);
@@ -80,16 +74,14 @@ function isPrime(number) {
 }
 
 function isCorrectUserAnswer(correctAnswer, userAnswer) {
-  return (correctAnswer - userAnswer) === 0 || correctAnswer === userAnswer ? 1 : 0;
+  return !!((correctAnswer - userAnswer) === 0 || correctAnswer === userAnswer);
 }
 
-function congratulations(tries, userScore, name) {
-  return userScore === tries
-    ? console.log(`${dialogue.endOfTheGame} ${name}!`)
-    : 0;
+function congratulations(name) {
+  return `${dialogue.endOfTheGame} ${name}!`;
 }
 
 export {
-  isEven, randomazer, randomOperator, mathOperation, compareAnswer, gsd,
+  isEven, randomazer, randomOperator, mathOperation, gsd,
   progressionGenerator, progressionMask, isPrime, isCorrectUserAnswer, congratulations,
 };
