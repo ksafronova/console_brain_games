@@ -7,7 +7,7 @@ import {
 export default function evenGame(tries, name) {
   const randomNumber = randomazer(3, 1, 1000);
   console.log(dialogue.brainEvenRules);
-  for (let i = 0; i < tries; i++) {
+  for (let i = 0; i < tries; i += 1) {
     const correctAnswer = isEven(randomNumber[i]);
     console.log(`${dialogue.question} ${randomNumber[i]}`);
     const userAnswer = readlineSync.question(`${dialogue.answer}`);

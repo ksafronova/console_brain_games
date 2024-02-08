@@ -6,7 +6,7 @@ import {
 
 export default function primeGame(tries, name) {
   console.log(dialogue.brainPrimeRule);
-  for (let i = 0; i < tries; i++) {
+  for (let i = 0; i < tries; i += 1) {
     const number = randomazer(1, 1, 10000);
     const correctAnswer = isPrime(number);
     console.log(`Question: ${number.toString()}`);

@@ -6,7 +6,7 @@ import {
 
 export default function calcGame(tries, name) {
   console.log(dialogue.brainCalculatorRule);
-  for (let i = 0; i < tries; i++) {
+  for (let i = 0; i < tries; i += 1) {
     const operands = randomazer(2, 1, 100);
     const operator = randomOperator();
     const correctAnswer = mathOperation(operator, operands);

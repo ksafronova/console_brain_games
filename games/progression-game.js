@@ -7,7 +7,7 @@ import {
 
 export default function progressionGame(tries, name) {
   console.log(dialogue.brainProgressionRule);
-  for (let i = 0; i < tries; i++) {
+  for (let i = 0; i < tries; i += 1) {
     const progression = progressionGenerator(random.int(5, 15));
     const secretNumber = randomazer(1, 5, progression.length - 1);
     console.log(`Question: ${progressionMask(progression, secretNumber)}`);

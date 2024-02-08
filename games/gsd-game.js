@@ -6,7 +6,7 @@ import {
 
 export default function gsdGame(tries, name) {
   console.log(dialogue.brainGSDRule);
-  for (let i = 0; i < tries; i++) {
+  for (let i = 0; i < tries; i += 1) {
     const numbers = randomazer(2, 1, 100);
     const correctAnswer = gsd(numbers);
     console.log(`Question: ${numbers[0]} ${numbers[1]}`);

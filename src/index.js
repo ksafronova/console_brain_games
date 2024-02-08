@@ -11,7 +11,7 @@ function randomazer(count, minRandomNumber, maxRandomNumber) {
     return random.int(minRandomNumber, maxRandomNumber);
   }
   const numbers = [];
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < count; i += 1) {
     numbers.push(random.int(minRandomNumber, maxRandomNumber));
   }
   return numbers;
@@ -49,7 +49,7 @@ function gsd(numbers) {
 function progressionGenerator(progressionLength) {
   const progressionStep = random.int(2, 50);
   const progression = [random.int(2, 15)];
-  for (let i = 0; i < progressionLength; i++) {
+  for (let i = 0; i < progressionLength; i += 1) {
     const nextNum = progression[i] + progressionStep;
     progression.push(nextNum);
   }
@@ -64,7 +64,7 @@ function progressionMask(progression, secretNumber) {
 
 function isPrime(number) {
   const endDivider = number ** 0.5;
-  for (let i = 2; i < endDivider; i++) {
+  for (let i = 2; i < endDivider; i += 1) {
     if (number % i === 0) {
       return 'no';
     }
