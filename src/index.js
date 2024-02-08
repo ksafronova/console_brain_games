@@ -63,15 +63,17 @@ function progressionMask(progression, secretNumber) {
 }
 
 function isPrime(number) {
-  const endDivider = number ** 0.5;
+  const endDivider = Math.pow(number, 0.5);
   for (let i = 2; i < endDivider; i++) {
     if (number % i === 0) {
-      return 'yes';
+      return 'no';
     }
     continue;
   }
-  return 'no';
+  return 'yes';
 }
+console.log(isPrime(9136));
+
 
 function isCorrectUserAnswer(correctAnswer, userAnswer) {
   return !!((correctAnswer - userAnswer) === 0 || correctAnswer === userAnswer);
