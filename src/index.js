@@ -63,12 +63,11 @@ function progressionMask(progression, secretNumber) {
 }
 
 function isPrime(number) {
-  const endDivider = Math.pow(number, 0.5);
+  const endDivider = number ** 0.5;
   for (let i = 2; i < endDivider; i++) {
     if (number % i === 0) {
       return 'no';
     }
-    continue;
   }
   return 'yes';
 }
