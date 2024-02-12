@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import startDialogue from '../src/cli.js';
 import dialogue from '../src/dialogue.js';
 import {
-  isEven, randomazer, isCorrectUserAnswer, congratulations, sayRules,
+  isEven, randomazer, isCorrectUserAnswer, congratulations, sayRules, gameLoss,
 } from '../src/index.js';
 
 export default function evenGame() {
@@ -14,7 +14,7 @@ export default function evenGame() {
     console.log(`${dialogue.question} ${randomNumber[i]}`);
     const userAnswer = readlineSync.question(`${dialogue.answer}`);
     if (!isCorrectUserAnswer(correctAnswer, userAnswer)) {
-      return `'${userAnswer}' ${dialogue.wrongAnswer} '${correctAnswer}'.\n ${dialogue.letsTryAgain} ${name}!`;
+      return gameLoss(userAnswer, correctAnswer, name);
     }
     console.log(dialogue.correctAnswer);
   }

@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import startDialogue from '../src/cli.js';
 import dialogue from '../src/dialogue.js';
 import {
-  randomazer, gsd, isCorrectUserAnswer, congratulations, sayRules,
+  randomazer, gsd, isCorrectUserAnswer, congratulations, sayRules, gameLoss,
 } from '../src/index.js';
 
 export default function gsdGame() {
@@ -14,7 +14,7 @@ export default function gsdGame() {
     console.log(`Question: ${numbers[0]} ${numbers[1]}`);
     const userAnswer = readlineSync.question(`${dialogue.answer}`);
     if (!isCorrectUserAnswer(correctAnswer, userAnswer)) {
-      return `'${userAnswer}' ${dialogue.wrongAnswer} '${correctAnswer}'.\n ${dialogue.letsTryAgain} ${name}!`;
+      return gameLoss(userAnswer, correctAnswer, name);
     }
     console.log(dialogue.correctAnswer);
   }

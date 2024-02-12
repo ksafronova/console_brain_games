@@ -3,7 +3,8 @@ import random from 'random';
 import startDialogue from '../src/cli.js';
 import dialogue from '../src/dialogue.js';
 import {
-  randomazer, progressionGenerator, progressionMask, isCorrectUserAnswer, congratulations, sayRules,
+  randomazer, progressionGenerator, progressionMask, isCorrectUserAnswer,
+  gameLoss, congratulations, sayRules,
 } from '../src/index.js';
 
 export default function progressionGame() {
@@ -16,7 +17,7 @@ export default function progressionGame() {
     const correctAnswer = progression[secretNumber];
     const userAnswer = readlineSync.question(`${dialogue.answer}`);
     if (!isCorrectUserAnswer(correctAnswer, userAnswer)) {
-      return `'${userAnswer}' ${dialogue.wrongAnswer} '${correctAnswer}'.\n ${dialogue.letsTryAgain} ${name}!`;
+      return gameLoss(userAnswer, correctAnswer, name);
     }
     console.log(dialogue.correctAnswer);
   }

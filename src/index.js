@@ -17,7 +17,7 @@ function sayRules(game) {
       console.log(dialogue.brainGSDRule);
       break;
     case 'prime':
-      console.log(dialogue.brainProgressionRule);
+      console.log(dialogue.brainPrimeRule);
       break;
     default: console.log('Something went wrong');
   }
@@ -98,11 +98,15 @@ function isCorrectUserAnswer(correctAnswer, userAnswer) {
   return !!((correctAnswer - userAnswer) === 0 || correctAnswer === userAnswer);
 }
 
+function gameLoss(userAnswer, correctAnswer, name) {
+  console.log(`'${userAnswer}' ${dialogue.wrongAnswer} '${correctAnswer}'.\n ${dialogue.letsTryAgain} ${name}!`);
+}
+
 function congratulations(name) {
-  return `${dialogue.endOfTheGame} ${name}!`;
+  console.log(`${dialogue.endOfTheGame} ${name}!`);
 }
 
 export {
-  isEven, randomazer, randomOperator, mathOperation, gsd, sayRules,
+  isEven, randomazer, randomOperator, mathOperation, gsd, sayRules, gameLoss,
   progressionGenerator, progressionMask, isPrime, isCorrectUserAnswer, congratulations,
 };
