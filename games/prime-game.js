@@ -1,12 +1,14 @@
 import readlineSync from 'readline-sync';
+import startDialogue from '../src/cli.js';
 import dialogue from '../src/dialogue.js';
 import {
-  randomazer, isPrime, isCorrectUserAnswer, congratulations,
+  randomazer, isPrime, isCorrectUserAnswer, congratulations, sayRules,
 } from '../src/index.js';
 
-export default function primeGame(tries, name) {
-  console.log(dialogue.brainPrimeRule);
-  for (let i = 0; i < tries; i += 1) {
+export default function primeGame() {
+  const name = startDialogue();
+  sayRules('prime');
+  for (let i = 0; i < 3; i += 1) {
     const number = randomazer(1, 1, 10000);
     const correctAnswer = isPrime(number);
     console.log(`Question: ${number.toString()}`);

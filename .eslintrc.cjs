@@ -8,6 +8,10 @@ module.exports = {
     {
       env: {
         node: true,
+        es6: true,
+      },
+      globals: {
+        Promise: 'off',
       },
       files: [
         '.eslintrc.{js,cjs}',

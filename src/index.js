@@ -2,6 +2,28 @@ import random from 'random';
 import _ from 'lodash';
 import dialogue from './dialogue.js';
 
+function sayRules(game) {
+  switch (game) {
+    case 'even':
+      console.log(dialogue.brainEvenRules);
+      break;
+    case 'calculator':
+      console.log(dialogue.brainCalculatorRule);
+      break;
+    case 'progression':
+      console.log(dialogue.brainProgressionRule);
+      break;
+    case 'gcd':
+      console.log(dialogue.brainGSDRule);
+      break;
+    case 'prime':
+      console.log(dialogue.brainProgressionRule);
+      break;
+    default: console.log('Something went wrong');
+  }
+  return 0;
+}
+
 function isEven(number) {
   return number % 2 === 0 ? 'yes' : 'no';
 }
@@ -81,6 +103,6 @@ function congratulations(name) {
 }
 
 export {
-  isEven, randomazer, randomOperator, mathOperation, gsd,
+  isEven, randomazer, randomOperator, mathOperation, gsd, sayRules,
   progressionGenerator, progressionMask, isPrime, isCorrectUserAnswer, congratulations,
 };

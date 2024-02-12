@@ -1,11 +1,13 @@
 import readlineSync from 'readline-sync';
 import dialogue from '../src/dialogue.js';
 import {
-  mathOperation, randomOperator, randomazer, isCorrectUserAnswer, congratulations,
+  mathOperation, randomOperator, randomazer, isCorrectUserAnswer, congratulations, sayRules,
 } from '../src/index.js';
+import startDialogue from '../src/cli.js';
 
-export default function calcGame(tries, name) {
-  console.log(dialogue.brainCalculatorRule);
+export default function calcGame(tries) {
+  const name = startDialogue();
+  sayRules('calculator');
   for (let i = 0; i < tries; i += 1) {
     const operands = randomazer(2, 1, 100);
     const operator = randomOperator();
