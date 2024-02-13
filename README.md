@@ -3,13 +3,12 @@
 
 [![Linter Status](https://api.codeclimate.com/v1/badges/764ae4d5afb1ce74e403/maintainability)](https://codeclimate.com/github/ksafronova/fullstack-javascript-project-44/maintainability)
 
-{<img src="https://api.codeclimate.com/v1/badges/764ae4d5afb1ce74e403/maintainability" />}[https://codeclimate.com/github/ksafronova/fullstack-javascript-project-44/maintainability]
 
 Install games:
 1 Clone repository
 2 Inside of repository run `sudo npm link`
 
-brain-games:https://asciinema.org/a/NGSOyjq3SvKXL3eCI0TW7CcYZ
+brain-games: https://asciinema.org/a/NGSOyjq3SvKXL3eCI0TW7CcYZ
 
 brain-even: https://asciinema.org/a/ngZB3qg96kabKgv96c8kvWRmP 
 
