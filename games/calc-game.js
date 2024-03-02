@@ -8,7 +8,7 @@ import startDialogue from '../src/cli.js';
 
 export default function calcGame(tries) {
   const name = startDialogue();
-  sayRules('calculator');
+  console.log(sayRules('calculator'));
   for (let i = 0; i < tries; i += 1) {
     const operands = randomazer(2, 1, 100);
     const operator = randomOperator();
@@ -16,9 +16,9 @@ export default function calcGame(tries) {
     console.log(`Question: ${operands[0]} ${operator} ${operands[1]}`);
     const userAnswer = readlineSync.question(`${dialogue.answer}`);
     if (!isCorrectUserAnswer(correctAnswer, userAnswer)) {
-      return gameLoss(userAnswer, correctAnswer, name);
+      return console.log(gameLoss(userAnswer, correctAnswer, name));
     }
     console.log(dialogue.correctAnswer);
   }
-  return congratulations(name);
+  return console.log(congratulations(name));
 }

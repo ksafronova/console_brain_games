@@ -9,17 +9,19 @@ import {
 
 export default function progressionGame() {
   const name = startDialogue();
-  sayRules('progression');
+  console.log(sayRules('progression'));
   for (let i = 0; i < 3; i += 1) {
-    const progression = progressionGenerator(random.int(5, 15));
+    const progressionLength = random.int(5, 15);
+    const progressionStep = random.int(5, 55);
+    const progression = progressionGenerator(progressionLength, progressionStep);
     const secretNumber = randomazer(1, 5, progression.length - 1);
     console.log(`Question: ${progressionMask(progression, secretNumber)}`);
     const correctAnswer = progression[secretNumber];
     const userAnswer = readlineSync.question(`${dialogue.answer}`);
     if (!isCorrectUserAnswer(correctAnswer, userAnswer)) {
-      return gameLoss(userAnswer, correctAnswer, name);
+      return console.log(gameLoss(userAnswer, correctAnswer, name));
     }
     console.log(dialogue.correctAnswer);
   }
-  return congratulations(name);
+  return console.log(congratulations(name));
 }

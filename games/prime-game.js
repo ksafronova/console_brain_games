@@ -7,16 +7,18 @@ import {
 
 export default function primeGame() {
   const name = startDialogue();
-  sayRules('prime');
+  console.log(sayRules('prime'));
   for (let i = 0; i < 3; i += 1) {
     const number = randomazer(1, 1, 10000);
-    const correctAnswer = isPrime(number);
+    const correctAnswer = isPrime(number) ? 'yes' : 'no';
     console.log(`Question: ${number.toString()}`);
     const userAnswer = readlineSync.question(`${dialogue.answer}`);
     if (!isCorrectUserAnswer(correctAnswer, userAnswer)) {
-      return gameLoss(userAnswer, correctAnswer, name);
+      return console.log(gameLoss(userAnswer, correctAnswer, name));
     }
     console.log(dialogue.correctAnswer);
   }
-  return congratulations(name);
+  return console.log(congratulations(name));
 }
+
+primeGame()

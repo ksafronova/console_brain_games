@@ -8,15 +8,15 @@ import {
 export default function evenGame() {
   const name = startDialogue();
   const randomNumber = randomazer(3, 1, 1000);
-  sayRules('even');
-  for (let i = 0; i < 3; i += 1) {
-    const correctAnswer = isEven(randomNumber[i]);
+  console.log(sayRules('even'));
+  for (let i = 0; i < 3; i++) {
+    const correctAnswer = isEven(randomNumber[i]) ? 'yes' : 'no';
     console.log(`${dialogue.question} ${randomNumber[i]}`);
     const userAnswer = readlineSync.question(`${dialogue.answer}`);
     if (!isCorrectUserAnswer(correctAnswer, userAnswer)) {
-      return gameLoss(userAnswer, correctAnswer, name);
+      return console.log(gameLoss(userAnswer, correctAnswer, name));
     }
     console.log(dialogue.correctAnswer);
   }
-  return congratulations(name);
+  return console.log(congratulations(name));
 }

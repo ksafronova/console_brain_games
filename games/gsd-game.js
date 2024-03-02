@@ -7,16 +7,16 @@ import {
 
 export default function gsdGame() {
   const name = startDialogue();
-  sayRules('gcd');
+  console.log(sayRules('gsd'));
   for (let i = 0; i < 3; i += 1) {
     const numbers = randomazer(2, 1, 100);
     const correctAnswer = gsd(numbers);
     console.log(`Question: ${numbers[0]} ${numbers[1]}`);
     const userAnswer = readlineSync.question(`${dialogue.answer}`);
     if (!isCorrectUserAnswer(correctAnswer, userAnswer)) {
-      return gameLoss(userAnswer, correctAnswer, name);
+      return console.log(gameLoss(userAnswer, correctAnswer, name));
     }
     console.log(dialogue.correctAnswer);
   }
-  return congratulations(name);
+  return console.log(congratulations(name));
 }
