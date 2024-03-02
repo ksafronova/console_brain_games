@@ -21,4 +21,4 @@ export default function primeGame() {
   return console.log(congratulations(name));
 }
 
-primeGame()
+primeGame();

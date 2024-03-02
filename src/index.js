@@ -1,6 +1,6 @@
 import random from 'random';
-import dialogue from './dialogue.js';
 import _ from 'lodash';
+import dialogue from './dialogue.js';
 
 function sayRules(game) {
   switch (game) {
@@ -18,10 +18,10 @@ function sayRules(game) {
   }
 }
 
-const isEven = (number) => number % 2 === 0 ? true : false;
+const isEven = (number) => (number % 2 === 0);
 
 function randomazer(count, minRandomNumber, maxRandomNumber) {
-  if(!_.isNumber(count) || !_.isNumber(minRandomNumber) || !_.isNumber(maxRandomNumber)) {
+  if (!_.isNumber(count) || !_.isNumber(minRandomNumber) || !_.isNumber(maxRandomNumber)) {
     return 'Something went wrong';
   }
   if (count === 1) {
@@ -52,7 +52,7 @@ function mathOperation(operator, operands) {
 }
 
 function gsd(numbers) {
-  if(!(_.isArray(numbers))) {
+  if (!(_.isArray(numbers))) {
     return 'Something went wrong';
   }
   let maxNum = _.max(numbers);
